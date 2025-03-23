@@ -1,11 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="WDD 231 - Web Frontend Development">
+    <meta name="author" content="James Nathan Pecundo">    
+    <meta name="keywords" content="WDD 231, Web Frontend Development, James Nathan Pecundo">
+    <title>James Nathan Pecundo - Course Homepage </title>
+    <link rel="icon" href="images/webicon1.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style-small.css">
+    <link rel="stylesheet" href="styles/style-large.css">
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+
 </head>
+
 <body>
-    
+    <header>
+        <div class="headpic">
+            <img class="avatar" src="images/mypicture.jpg" alt="Kyle Aldrich Moran photo">
+        </div>
+        <h2>James Nathan Pecundo</h2>
+        <button id="menu" title="Menu"></button>
+    </header>
+    <nav>
+        <ul>
+            <li><a class="active" href="/index.html">Home</a></li>
+            <li><a href="https://github.com/jmsnthnp" target="_blank">GitHub Profile</a></li>
+            <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn Profile</a></li>
+            <li><a href="" target="_blank">Chamber</a></li>
+        </ul>
+    </nav>
+    <main>
+       
+        <section class="courseWork-box">
+            <h1>Course Work</h1>
+            <ul>
+                <li>Chamber of Commerce Site Planning</li>
+                <li>Chamber of Commerce Directory Page</li>
+                <li>Chamber Home Page</li>
+                <li>Chamber Membership Application Form / Project Subject Proposal</li>
+                <li>Chamber Discover Page / Project Site Plan
+                </li>
+                <li>Individual Website Project</li>
+                <li>Final Exam Test</li>
+            </ul>
+        </section>
+        <section class="country-box">
+            <h2>Philippines</h2>
+            <picture>
+                <img src="images/metromanila.jpg" alt="Philippines" width="300" height="225">
+            </picture>
+            <p>Metro Manila</p>
+        </section>
+        <section class="certificate-box">
+            <h2>Web and Computer Programming certificate</h2>
+            <div class="boxButton">
+                <button class="courseButton" value="all" title="Filter button">All</button>
+                <button class="courseButton" value="cse" title="Filter button">CSE</button>
+                <button class="courseButton" value="wdd" title="Filter button">WDD</button>
+            </div>
+            <div class="boxcertificate01 boxCourse"></div>
+            <dialog id="courses-details"></dialog>
+            <p id="totalCreditsCert01">Total Credits for Certificate 1: 0</p>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> James Nathan Pecundo |
+            Philippines</p>
+        <p id="lastModified"></p>
+        
+    </footer>
 </body>
+
 </html>
