@@ -1,24 +1,6 @@
 {
     "data": [
         {
-            "Name": "Majestic Press Inc.",
-            "Industry": "Printing",
-            "Address": "122 4th Street corner 10th Avenue Grace Park, Caloocan City, 4th St, Caloocan, 1400 Metro Manila",
-            "Website": "https://www.paperindex.com/profile/majestic-press-inc/23042219/45240",
-            "Phone": "(02) 8366 8888",
-            "Membership": "images/gold.png",
-            "logo": "https://cdn.paperindex.com/memberlogos/majestic-press-inc-logo.png"
-        },
-        {
-            "Name": "Astron Metal Works Corporation",
-            "Industry": "Manufacturing",
-            "Address": "147 10th street between 11th and 12th avenue , Grace Park Caloocan City, Caloocan, 1400 Metro Manila",
-            "Website": "https://astronmetal.com/stainless-steel-fabrication-philippines/",
-            "Phone": "+63 917 844 4843 / (02) 8364 3065",
-            "Membership": "images/gold.png",
-            "logo": "https://rec-data.kalibrr.com/logos/QWEW44BBAHSTQ8ZTLUS5VF6DTSBLFMUEZZM9R8KF-5a97b1e9.png"
-        },
-        {
             "Name": "Lexan Industrial Corporation",
             "Industry": "Manufacturing",
             "Address": "131 7th Avenue Bet. 9th & 10th Streets, Grace Park 1400, Caloocan City, Metro Manila, Philippines",
@@ -55,15 +37,6 @@
             "logo": "https://www.philbizs.com/upload/owner/1569307036_p1.png"
         },
         {
-            "Name": "Equipoise Accounting & Consultancy Services",
-            "Industry": "Audit and Accounting",
-            "Address": "T12 Santol Rd. Potrero Malabon City, Caloocan City, Metro Manila, Philippines",
-            "Website": "https://www.philbizs.com/directory/equipoise-accounting-and-consultancy-services",
-            "Phone": "447-2489 / 0917-5179686",
-            "Membership": "images/silver.png",
-            "logo": "https://www.philbizs.com/upload/owner/1569292116_p1.png"
-        },
-        {
             "Name": "Hydraulic Hose Philippines - Rallyson Enterprises",
             "Industry": "Automotive Parts and Services",
             "Address": "100 C-3 Road Corner B. Serrano, Caloocan City, Manila, Philippines, Caloocan City, Metro Manila, Barangay 115, Philippines",
@@ -71,6 +44,24 @@
             "Phone": "(+632) 364-2267",
             "Membership": "images/gold.png",
             "logo": "https://www.philbizs.com/upload/owner/1569291364_rallyL.png"
+        },
+        {
+            "Name": "Hivelabs Training Center",
+            "Industry": "Manpower Staffing and Cleaning/Building Maintenance",
+            "Address": "2nd F Unit B, Correal Bldg., No. 14 Lotus St., T.S. Cruz Subd., Almanza Dos, Las Pinas City, Metro Manila, Philippines",
+            "Website": "https://www.philbizs.com/directory/hivelabs-training-center",
+            "Phone": "(632) 441-2487",
+            "Membership": "images/gold.png",
+            "logo": "https://www.philbizs.com/upload/owner/1569215906_1523339536-60-hivelabs-training-center.jpg"
+        },
+        {
+            "Name": "Astron Metal Works Corporation",
+            "Industry": "Manufacturing",
+            "Address": "147 10th street between 11th and 12th avenue , Grace Park Caloocan City, Caloocan, 1400 Metro Manila",
+            "Website": "https://astronmetal.com/stainless-steel-fabrication-philippines/",
+            "Phone": "+63 917 844 4843 / (02) 8364 3065",
+            "Membership": "images/gold.png",
+            "logo": "https://rec-data.kalibrr.com/logos/QWEW44BBAHSTQ8ZTLUS5VF6DTSBLFMUEZZM9R8KF-5a97b1e9.png"
         },
         {
             "Name": "Edisy Trading Corporation",
@@ -82,13 +73,22 @@
             "logo": "https://www.philbizs.com/upload/owner/1569220901_edisy.jpg"
         },
         {
-            "Name": "Hivelabs Training Center",
-            "Industry": "Manpower Staffing and Cleaning/Building Maintenance",
-            "Address": "2nd F Unit B, Correal Bldg., No. 14 Lotus St., T.S. Cruz Subd., Almanza Dos, Las Pinas City, Metro Manila, Philippines",
-            "Website": "https://www.philbizs.com/directory/hivelabs-training-center",
-            "Phone": "(632) 441-2487",
+            "Name": "Equipoise Accounting & Consultancy Services",
+            "Industry": "Audit and Accounting",
+            "Address": "T12 Santol Rd. Potrero Malabon City, Caloocan City, Metro Manila, Philippines",
+            "Website": "https://www.philbizs.com/directory/equipoise-accounting-and-consultancy-services",
+            "Phone": "447-2489 / 0917-5179686",
+            "Membership": "images/silver.png",
+            "logo": "https://www.philbizs.com/upload/owner/1569292116_p1.png"
+        },
+        {
+            "Name": "Majestic Press Inc.",
+            "Industry": "Printing",
+            "Address": "122 4th Street corner 10th Avenue Grace Park, Caloocan City, 4th St, Caloocan, 1400 Metro Manila",
+            "Website": "https://www.paperindex.com/profile/majestic-press-inc/23042219/45240",
+            "Phone": "(02) 8366 8888",
             "Membership": "images/gold.png",
-            "logo": "https://www.philbizs.com/upload/owner/1569215906_1523339536-60-hivelabs-training-center.jpg"
+            "logo": "https://cdn.paperindex.com/memberlogos/majestic-press-inc-logo.png"
         }
     ]
     
