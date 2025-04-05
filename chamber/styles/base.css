@@ -468,7 +468,7 @@ address,
 address a:hover,
 .quick-link-box a:hover {
   color: whitesmoke;
-  text-decoration: 3px underline var(white);
+  text-decoration: 3px underline white;
   text-underline-offset: 5px;
 }
 
