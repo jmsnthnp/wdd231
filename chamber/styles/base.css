@@ -310,7 +310,7 @@ svg {
   padding-block-end: 3em;
   padding-inline: 1.5em;
   background-color: var(--secondary-color);
-  box-shadow: var(--box-shadow-all-4sides);
+  box-shadow: 0 1px 5px var(--primary-color);
   border-radius: 0.5rem;
   position: relative;
   gap: var(--default-gap);
@@ -342,7 +342,7 @@ svg {
   padding-inline: 1em;
   display: grid;
   gap: 3rem;
-  box-shadow: var(--box-shadow-all-4sides);
+  box-shadow: 0 1px 5px var(--primary-color);
 }
 
 .event-details {
