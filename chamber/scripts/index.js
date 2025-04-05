@@ -1,3 +1,4 @@
+
 "use strict";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -32,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
           memberDiv.classList.add("member-card");
           memberDiv.innerHTML = `
               <img src="${member.logo}" alt="${member.Name} logo" width="100px" height="100px">
-              <p>${member.name}</p>
+              <p>${member.Name}</p>
           `;
           spotlightContainer.appendChild(memberDiv);
         });
@@ -223,8 +224,8 @@ activePage();
 // The weather forecast functionality. Displaying the weather
 // forecast to the user
 function weatherForecast() {
-  const lat = -25.74433236181061;
-  const long = 28.234333823643258;
+  const lat = 14.5995; // Latitude for Caloocan City
+  const long = 120.9772; // Longitude for Caloocan City
   const apiKey = "f4619f75c2d45cc1bfe1a55992e82aaa";
 
   const currentTemp = document.querySelector("#current-temp");
@@ -233,7 +234,7 @@ function weatherForecast() {
   const windSpeed = document.querySelector("#windspeed");
   const windDirection = document.querySelector("#wind-direction");
 
-  const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=imperial`;
+  const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`; // Changed to metric for Celsius
 
   const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=${apiKey}`;
 
@@ -252,18 +253,156 @@ function weatherForecast() {
   };
 
   function displayResults(data) {
-    currentTemp.innerHTML = `${data.main.temp}&deg;C`;
+    currentTemp.innerHTML = `${data.main.temp}&deg;C`; // Display temperature in Celsius
     const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
     let desc = data.weather[0].description;
     weatherIcon.setAttribute("src", iconsrc);
     weatherIcon.setAttribute("alt", "weather-icon");
     captionDesc.textContent = `${desc}`;
-    windSpeed.textContent = data.wind.speed;
-    windDirection.innerHTML = `${data.wind.deg}&deg;`;
+    windSpeed.textContent = `${data.wind.speed} m/s`; // Wind speed in meters per second
+    windDirection.innerHTML = `${data.wind.deg}&deg;`; // Wind direction in degrees
   }
+  
   apiFetch();
 }
+
 weatherForecast();
+
+
+/////////////
+/////////////
+const myKey = "90158c8799bb28ca5c3054efdcbe85fd";
+const myLat = "14.5995";  // Latitude for Caloocan City
+const myLon = "120.9842";  // Longitude for Caloocan City
+
+const time = new Date();
+const day = time.getDay();
+const weekdays = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+];
+
+document.addEventListener("DOMContentLoaded", () => {
+    const urlWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLon}&appid=${myKey}`;
+
+    async function apiFetch() {
+        try {
+            const response = await fetch(urlWeather);
+            if (response.ok) {
+                const data = await response.json();
+                displayResults(data);
+            } else {
+                throw new Error(await response.text());
+            }
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    const displayResults = (data) => {
+        const eventMainBox = document.querySelector("#weather-main");
+        eventMainBox.innerHTML = "";
+
+        const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+        let desc = data.weather[0].description;
+
+        // Convert temperature from Kelvin to Celsius
+        const tempCelsius = (data.main.temp - 273.15).toFixed(0);
+
+        eventMainBox.innerHTML = `
+                <div class="current-weather">
+                    <h2>The current Weather in: <span id="city-name">${data.name}</span></h2>
+                    <h4>${weekdays[day]}</h4>
+                    <div class="weather-content"></div>
+                    <p>Temperature <span id="current-temp">${tempCelsius}&deg;C</span></p>
+                    <figure>
+                        <img id="weather-icon" src="${iconsrc}" alt="${desc}">
+                        <figcaption>${desc}</figcaption>
+                    </figure>
+                </div>
+            `;
+    };
+
+    apiFetch();
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${myLat}&lon=${myLon}&appid=${myKey}`;
+
+    async function apiForecastFetch() {
+        try {
+            const response = await fetch(forecastUrl);
+            if (response.ok) {
+                const forecastData = await response.json();
+                displayResultsForecast(forecastData);
+            } else {
+                throw new Error(await response.text());
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    const displayResultsForecast = (forecastData) => {
+        const weatherForecast = document.querySelector("#weather-forecast");
+        weatherForecast.innerHTML = "";
+
+        const forecast = document.createElement("article");
+        forecast.className = "forecast";
+        forecast.innerHTML = `
+                <h3>3-Days Weather Forecast</h3>
+                <div class="main-day-box">
+                    <div class="day-box">
+                        <h4 id="day-01">${weekdays[(day + 1) % 7]}</h4>
+                        <figure>
+                            <img id="weather-icon-1" src="" alt="">
+                            <figcaption id="figcaption-1"></figcaption>
+                        </figure>
+                        <p>Temperature: <span id="temp-1"></span></p>
+                    </div>
+                    <div class="day-box">
+                        <h4 id="day-02">${weekdays[(day + 2) % 7]}</h4>
+                        <figure>
+                            <img id="weather-icon-2" src="" alt="">
+                            <figcaption id="figcaption-2"></figcaption>
+                        </figure>
+                        <p>Temperature: <span id="temp-2"></span></p>
+                    </div>
+                    <div class="day-box">
+                        <h4 id="day-03">${weekdays[(day + 3) % 7]}</h4>
+                        <figure>
+                            <img id="weather-icon-3" src="" alt="">
+                            <figcaption id="figcaption-3"></figcaption>
+                        </figure>
+                        <p>Temperature: <span id="temp-3"></span></p>
+                    </div>
+                </div>
+            `;
+        weatherForecast.appendChild(forecast);
+
+        const dailyForecasts = forecastData.list.slice(0, 3);
+        dailyForecasts.forEach((dailyData, index) => {
+            // Convert temperature from Kelvin to Celsius
+            const tempCelsius = (dailyData.main.temp - 273.15).toFixed(0);
+            document.getElementById(
+                `weather-icon-${index + 1}`
+            ).src = `https://openweathermap.org/img/wn/${dailyData.weather[0].icon}@2x.png`;
+            document.getElementById(`figcaption-${index + 1}`).textContent =
+                dailyData.weather[0].description;
+
+            document.getElementById(
+                `temp-${index + 1}`
+            ).textContent = `${tempCelsius}°C`;
+        });
+    };
+
+    apiForecastFetch();
+});
 
 // ////////////////////////////////////////////////////////////
 function displayDate() {
