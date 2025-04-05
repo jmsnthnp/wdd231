@@ -168,6 +168,10 @@ svg {
   display: block;
 }
 
+.header-nav {
+border:double var(--primary-color);
+}
+
 .header-box {
   width: 70%;
   margin: 4em auto;
@@ -180,7 +184,7 @@ svg {
 .header-intro {
   padding-inline: 2em;
   padding-block: 1em;
-  box-shadow: var(--box-shadow-all-4sides);
+  box-shadow: 0 1px 8px var(--primary-color);
   justify-content: center;
   gap: var(--default-gap);
   text-align: center;
