@@ -58,6 +58,10 @@ body {
   line-height: 1.5;
 }
 
+header {
+  box-shadow: 0 1px 8px var(--primary-color);
+}
+
 /* Header section */
 :where(.header-box, .header-intro) {
   display: grid;
@@ -123,7 +127,7 @@ svg {
 }
 
 .nav-links {
-  color: #444;
+  color: var(--primary-color);
   padding: 0.4em;
   text-decoration: none;
   padding-block: 1em;
@@ -276,6 +280,12 @@ svg {
 
 .news-event-section {
   display: grid;
+  background-image: url('../images/pattern-randomized.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+
   padding-top: 3em;
   padding-bottom: 2em;
   overflow: hidden;
@@ -515,10 +525,15 @@ address a:hover,
 
 .member-card-section {
   background-color: #eef0f4;
+  background-image: url('../images/pattern-randomized.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   margin-block: 1em;
   padding-block: 1.5em;
   padding-inline: 1em;
 }
+
 
 .member-card {
   width: auto;
