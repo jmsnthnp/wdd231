@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Caloocan Chamber of Commerce | Discover Page</title>
+        <meta name="author" content="James Nathan Pecundo">
+        <meta name="description" content="Join the Caloocan Chamber of Commerce to explore limitless possibilities in business ventures, investments, and innovation.">
+        <meta property="og:title" content="Caloocan Business Chamber">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://jmsnthnp.github.io/wdd231/chamber/discover.html">
+        <meta property="og:image" content="https://jmsnthnp.github.io/wdd231/chamber/images/logo-chamber.webp">
+        <meta property="og:site_name" content="Caloocan Business Chamber">
+        <meta property="og:description" content="Join the Caloocan Chamber of Commerce to explore limitless possibilities in business ventures, investments, and innovation.">
+        <link rel="icon" href="images/logo-chamber.png" sizes="32x32" type="image/png">
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;700&family=Poppins&display=swap" rel="stylesheet">
+          
+        <link rel="stylesheet" href="styles/discover.css">
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/base.css">
+        <link rel="stylesheet" href="styles/larger.css">
+      </head>
+	<body class="discover-page-body">
+		<header>
+			<button class="menu-btn" aria-label="Toggle menu button">
+				<svg>
+					<use xlink:href="images/sprite.svg#icon-icon-menu"></use>
+				</svg>
+			</button>
+			<div class="logo-box">
+				<a href="index.html">
+					<img src="images/header-chambers.png" alt="Caloocan Business Chamber logo" class="logo" width="323" height="130" loading="lazy" />
+				</a>
+			</div>
+            
+			<nav class="header-nav">
+				<ul class="nav-list">
+					<li>
+						<a href="index.html" class="nav-links">
+							<svg>
+								<use xlink:href="images/sprite.svg#icon-home"></use>
+							</svg> HOME </a>
+					</li>
+					<li>
+						<a href="discover.html" class="nav-links">
+							<svg>
+								<use xlink:href="images/sprite.svg#search"></use>
+							</svg> DISCOVER </a>
+					</li>
+					<li>
+						<a href="directory.html" class="nav-links">
+							<svg>
+								<use xlink:href="images/sprite.svg#icon-folder"></use>
+							</svg> DIRECTORY </a>
+					</li>
+					<li>
+						<a href="join.html" class="nav-links">
+							<svg>
+								<use xlink:href="images/sprite.svg#icon-add-user"></use>
+							</svg> JOIN </a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+      <div class="h1-discover">
+        <h1>Discover Fun Places Here!</h1>
+      </div>
+        <div id="allplaces"></div>
+        <div id="placeModal" class="modal">
+            <div class="modal-content">
+                <h3>Place Details</h3>
+                <p id="modalCost"></p>
+                <button class="modal-close">Close</button>
+            </div>
+        </div>
+
+        <dialog id="visitModal">
+          <div class="modal-content">
+              <span class="close-button">✖</span>
+              <p id="visitMessage"></p>
+          </div>
+      </dialog>
+		</main>
+
+		<footer>
+            <div class="contact-box">
+              <p class="footer-captions">Contact Us</p>
+              <address>
+                <a href="tel:+639771238087">+(63) 977 123 8087</a>
+              </address>
+            </div>
+            <div class="footer-socials">
+              <p class="footer-captions">Stay Connected</p>
+              <ul>
+                <li>
+                  <a href="https://www.instagram.com/" target="_blank" class="footer-social-links" aria-label="Go to Instagram">
+                    <svg>
+                    <use xlink:href="images/sprite.svg#instagram" loading="lazy"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/" target="_blank" class="footer-social-links" aria-label="Go to LinkedIn">
+                    <svg>
+                    <use xlink:href="images/sprite.svg#linkedin" loading="lazy"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/" target="_blank" class="footer-social-links" aria-label="Go to Facebook">
+                    <svg>
+                    <use xlink:href="images/sprite.svg#icon-facebook" loading="lazy"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="copyright-box">
+              <p> &copy; <span id="year"></span> James Nathan Pecundo | Philippines </p>
+              <p> Last modified: <span class="last-modify"></span>
+              </p>
+              <p id="analytics"></p>
+            </div>
+          </footer>
+        <script src="scripts/discover.js" type="module"></script>
+    </body>
+</html>

@@ -1,3 +1,11 @@
+.discover-page-body main {
+  background-image: url('../images/pattern-randomized.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 10px;
+}
+
 .h1-discover {
     display: flex;
     justify-content: center;
