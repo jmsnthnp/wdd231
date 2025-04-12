@@ -1,23 +1,25 @@
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Caloocan Chamber of Commerce Directory</title>
+		<title>Caloocan Chamber of Commerce | Directory Page</title>
 		<meta name="author" content="James Nathan Pecundo">
-		<meta name="description" content="Discover the Caloocan Chamber of Commerce's dynamic Member Directory, showcasing a diverse range of businesses driving our vibrant community. Connect with trusted service providers, engage with industry leaders, and explore local innovation. It's your gateway to the region's thriving business landscape—where connections grow, partnerships flourish, and opportunities abound. Join us in building a strong and prosperous business ecosystem."/>
+		<meta name="description" content="Discover the Caloocan Chamber of Commerce Member Directory: connect with local businesses, trusted services, and industry leaders."/>
 		<meta property="og:title" content="Caloocan Business Chamber ">
 		<meta property="og:type" content="website">
 		<meta property="og:url" content="https://jmsnthnp.github.io/wdd231/chamber/directory.html">
 		<meta property="og:image" content="https://jmsnthnp.github.io/wdd231/chamber/images/logo-chamber.webp">
 		<meta property="og:site_name" content="Caloocan Business Chamber">
-		<meta property="og:description" content="Discover the Caloocan Chamber of Commerce's dynamic Member Directory, showcasing a diverse range of businesses driving our vibrant community. Connect with trusted service providers, engage with industry leaders, and explore local innovation. It's your gateway to the region's thriving business landscape—where connections grow, partnerships flourish, and opportunities abound. Join us in building a strong and prosperous business ecosystem.">
+		<meta property="og:description" content="Discover the Caloocan Chamber of Commerce Member Directory: connect with local businesses, trusted services, and industry leaders.">
 		<link rel="icon" type="image/png" sizes="32x32" href="images/logo-chamber.png">
 		<link rel="manifest" href="site.webmanifest">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;700&family=Poppins&display=swap" rel="stylesheet">
 		<script src="scripts/index.js" defer></script>
+		<link rel="stylesheet" href="styles/directory.css">
 		<link rel="stylesheet" href="styles/normalize.css">
 		<link rel="stylesheet" href="styles/base.css">
 		<link rel="stylesheet" href="styles/larger.css">
@@ -32,7 +34,7 @@
 			</button>
 			<div class="logo-box">
 				<a href="index.html">
-					<img src="images/header-chambers.png" alt="Caloocan Business Chamber logo" class="logo" width="350" height="100" />
+					<img src="images/header-chambers.png" alt="Caloocan Business Chamber logo" class="logo" width="323" height="130" />
 				</a>
 			</div>
             
@@ -76,71 +78,44 @@
 			<section class="member-card-section"></section>
 		</main>
 		<footer>
-			<div class="contact-box">
-				<p class="footer-captions">Contact Us</p>
-				<address>
-					<a href="mailto:jmsnthnp@gmail.com">📧 jmsnthnp@gmail.com</a>
-					<!-- <br> -->
-					<a href="tel:+639771238087">📞 +(63) 977 123 8087</a>
-					<p>Caloocan City, Philippines</p>
-				</address>
-			</div>
-			<div class="quick-link-box">
-				<p class="footer-captions">Quick Links</p>
-				<ul>
-					<li>
-						<a href="index.html">Home</a>
-					</li>
-					<li>
-						<a href="discover.html">Discover</a>
-					</li>
-					<li>
-						<a href="directory.html">Directory</a>
-					</li>
-					<li>
-						<a href="join.html">Join Us</a>
-					</li>
-				</ul>
-			</div>
-			<div class="footer-socials">
-				<p class="footer-captions">Stay Connected</p>
-				<ul>
-					<li>
-						<a href="https://www.instagram.com/" target="_blank" class="footer-social-links" aria-label="Go to Instagram page">
-							<svg>
-								<use xlink:href="images/sprite.svg#instagram"></use>
-							</svg>
-						</a>
-					</li>
-					<li>
-						<a href="https://www.linkedin.com/" target="_blank" class="footer-social-links" aria-label="Go to LinkedIn">
-							<svg>
-								<use xlink:href="images/sprite.svg#linkedin"></use>
-							</svg>
-						</a>
-					</li>
-					<li>
-						<a href="https://www.facebook.com/" target="_blank" class="footer-social-links" aria-label="Go to Facebook page">
-							<svg>
-								<use xlink:href="images/sprite.svg#icon-facebook"></use>
-							</svg>
-						</a>
-					</li>
-					<li>
-						<a href="https://www.youtube.com/" target="_blank" class="footer-social-links" aria-label="Go to Youtube.com homepage">
-							<svg>
-								<use xlink:href="images/sprite.svg#youtube"></use>
-							</svg>
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="copyright-box">
-				<p> &copy; <span id="year"></span> James Nathan Pecundo | Philippines </p>
-				<p> Last modified: <span class="last-modify"></span>
-				</p>
-				<p id="analytics"></p>
-			</div>
-		</footer>
+            <div class="contact-box">
+              <p class="footer-captions">Contact Us</p>
+              <address>
+                <a href="tel:+639771238087">+(63) 977 123 8087</a>
+              </address>
+            </div>
+            <div class="footer-socials">
+              <p class="footer-captions">Stay Connected</p>
+              <ul>
+                <li>
+                  <a href="https://www.instagram.com/" target="_blank" class="footer-social-links" aria-label="Go to Instagram">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/" target="_blank" class="footer-social-links" aria-label="Go to LinkedIn">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/" target="_blank" class="footer-social-links" aria-label="Go to Facebook">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="copyright-box">
+              <p> &copy; <span id="year"></span> James Nathan Pecundo | Philippines </p>
+              <p> Last modified: <span class="last-modify"></span>
+              </p>
+              <p id="analytics"></p>
+            </div>
+          </footer>
 	</body>
 </html>

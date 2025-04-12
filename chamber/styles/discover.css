@@ -1,0 +1,216 @@
+.h1-discover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 0;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  .close-button:hover,
+  .modal-close {
+    cursor: pointer;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  #allplaces {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  #allplaces div {
+    border: 1px solid #999;
+    background-color: #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    display: grid;
+    min-height: 250px;
+    grid-template-areas: "name" "photo" "location" "description" "button";
+  }
+  
+  #allplaces div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-column: 1;
+    grid-area: photo;
+  }
+  
+  #allplaces div .content {
+    grid-column: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #allplaces div h2 {
+    margin: 0 0 1rem;
+    font-size: 1.5rem;
+    color: #333;
+    grid-area: name;
+  }
+  
+  #allplaces div p {
+    margin: 0.5rem 0;
+    flex-grow: 1;
+    grid-area: description;
+  }
+  
+  #allplaces div address {
+    margin: 0.5rem 0;
+    font-style: normal;
+    color: #666;
+    grid-area: location;
+  }
+  
+  #allplaces div button {
+    margin: 1rem 0;
+    align-self: flex-start;
+    padding: 8px 16px;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    grid-area: button;
+    transition: 0.3s !important;
+  }
+  
+  #allplaces div button:hover {
+    background: #1b2232 !important;
+    color: #c0902c !important;
+  }
+  
+  #visitModal {
+    border: none;
+    box-shadow: 0 0 5px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 500px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #visitModal::backdrop {
+    background: rgba(0, 0, 0, 0.702);
+  }
+  
+  #visitMessage {
+    padding: 20px 0;
+    margin: 0;
+    display: block;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 5px;
+    margin: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .modal h2 {
+    font-size: 2rem;
+    font-family: var(--heading-font);
+    text-align: center;
+    margin-block-end: 1rem;
+  }
+  
+  .modal ul {
+    list-style: none;
+    margin-inline-start: 1.5rem;
+  }
+  
+  .modal ul ::marker {
+    content: "✓ ";
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: 0.5s ease-in-out fadeIn;
+  }
+  
+  .modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+  }
+  
+  .modal-close {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007acc;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  .modal-close:hover {
+    background-color: #005fa3;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+  
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @media only screen and (min-width: 38rem) {
+    #allplaces {
+      grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    }
+  
+    #allplaces div {
+      grid-template-columns: 250px 1fr;
+      grid-template-areas: "photo" "name" "description" "location" "button";
+    }
+  
+    #allplaces div .content {
+      grid-column: 2;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    #allplaces div h2 {
+      font-size: 1.8rem;
+    }
+  
+    #allplaces div img:hover {
+      box-shadow: 0 0 50px #333;
+      border-radius: 15px 150px;
+    }
+  }

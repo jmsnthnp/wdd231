@@ -1,0 +1,140 @@
+.intro-section {
+    text-align: center;
+    padding-inline: 1em;
+    margin: 40px;
+  }
+  
+  .views-button-section {
+    margin-block: 1em;
+    background-color: var(--primary-color);
+    padding-block: 1em;
+    padding-inline: 1em;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .views-button-section button {
+    padding-block: 0.5em;
+    padding-inline: 1em;
+    border: none;
+    border-radius: 5px;
+    background: transparent;
+    box-shadow: var(--box-shadow-all-4sides);
+  }
+  
+  .views-button-section button:active {
+    border-color: white;
+    outline: 2px dotted wheat;
+    outline-offset: 0.2em;
+  }
+  
+  .views-button-section #grid-view {
+    background-color: var(--optional-color);
+    color: var(--secondary-color);
+  }
+  
+  .views-button-section #grid-view:hover, .views-button-section #list-view:hover {
+    background-color: var(--secondary-color);
+    color: var(--optional-color);
+  }
+  
+  .views-button-section #list-view {
+    background-color: var(--optional-color);
+    color: var(--secondary-color);
+  }
+  
+  .member-card-section {
+    background-color: #eef0f4;
+    background-image: url('../images/pattern-randomized.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-block: 1em;
+    padding-block: 1.5em;
+    padding-inline: 1em;
+    background-image: pat
+  }
+  
+  .member-card {
+    width: auto;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-block: 1em;
+    padding-inline: 1em;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow-all-4sides-cleaner);
+    margin: 0 auto;
+    overflow: auto;
+  }
+  
+  .member-card figure div {
+    width: auto;
+  }
+  
+  .member-card figure img {
+    width: 15%;
+    height: auto;
+  }
+  
+  .member-card figure div,
+  .member-card .member-info-box img {
+    margin: 0 auto;
+    width: 12;
+    height: auto;
+  }
+  
+  .member-card figure figcaption {
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  .member-card .member-info-box {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .member-card .member-info-box a {
+    color: var(--optional-color);
+  }
+  
+  .member-card .member-info-box a:active,
+  .member-card .member-info-box a:visited {
+    color: var(--primary-color);
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+  }
+  
+  .list {
+    padding: 0;
+  }
+  
+  .list .member-card:nth-child(even) {
+    background-color: var(--tertiary-color);
+  }
+  
+  .list .member-card {
+    text-align: left;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  
+  .list .member-card figure div {
+    display: none;
+  }
+  
+  .list .member-card .member-info-box img {
+    margin: 0;
+  }
+  
+  
+  
+  

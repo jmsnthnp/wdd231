@@ -1,54 +1,56 @@
-@media only screen and (min-width: 56.25em) {
+@media only screen and (min-width: 64rem) {
+  
+  .directory-page-body header,
+  .discover-page-body header,
+  .homepage-body header,
+  .join-page-body header,
+  .thankyou-page-body header {
+    padding-inline: 2rem;
+    padding-block-end: 2rem;
+    gap: 3rem;
+  }
+  .cta-box,
+  .header-box {
+    gap: var(--default-gap);
+  }
+  .news-box,
+  header {
+    place-items: center;
+  }
   html {
     font-size: 62.5%;
   }
-
-  /* ----------------------------------------------------- */
-  /* ---------------------- HOMEPAGE PAGE SECTION --------------- */
-  /* ----------------------------------------------------- */
-
+  #allplaces {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
   header {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    place-items: center;
   }
-
-  /* .directory-page-body header,
-  .join-page-body header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  } */
-
   .directory-page-body header nav,
-  .join-page-body header nav {
+  .discover-page-body header nav,
+  .join-page-body header nav,
+  .thankyou-page-body header nav {
     align-self: center;
   }
-
   .homepage-body header {
     min-height: 100vh;
     grid-template-rows: 60px 1fr;
-    gap: 3rem;
-    padding-inline: 2rem;
-    padding-block-end: 2rem;
   }
-
   h1 {
-    font-size: 4.5rem;  
+    font-size: 4.5rem;
   }
-
   .menu-btn {
     display: none;
   }
-
   nav {
     display: flex;
-    grid-column: 3 / 5;
-    grid-row: 1 / 2;
+    grid-column: 3/5;
+    grid-row: 1/2;
     justify-self: end;
     align-self: self-end;
   }
-
   :where(
       nav ul,
       .nav-links,
@@ -61,172 +63,140 @@
     justify-content: center;
     align-items: center;
   }
-
   .nav-links {
     padding-inline: 1em;
     padding-block: 0.5em;
   }
-
   .header-box {
     width: 60%;
-    grid-row: 2 / 3;
+    grid-row: 2/3;
     grid-column: 1 / span 3;
     justify-self: center;
-    gap: var(--default-gap);
   }
-
   .header-intro {
     text-align: left;
     padding-bottom: 3em;
   }
-
   .logo-box {
     width: 15rem;
     justify-self: left;
     align-self: self-start;
   }
-
   .logo-box img {
     padding: 1.5rem 0;
   }
-
   .cta-box {
-    gap: var(--default-gap);
     justify-self: left;
   }
-
-  .btn-join,
-  .btn-explore {
+  .btn-explore,
+  .btn-join {
     padding: 0.25em 0.75em;
     min-width: 10ch;
     min-height: 4.4rem;
   }
-
   .btn-explore:hover,
   .btn-join:hover {
     transform: scale(1.1);
   }
-
   .btn-explore:active,
   .btn-join:active {
     transform: scale(1);
   }
-
   .figure-box {
-    transition: all 0.2s;
-    /* gap: 2rem; */
+    transition: 0.2s;
   }
-
   .figure-box:hover {
     transform: translateY(-10px);
   }
-
   .news-event-section {
-    padding-top: 0em;
+    padding-top: 0;
     padding-bottom: 3em;
   }
-
   .news-event-section-box {
     grid-template-columns: repeat(3, 1fr);
     gap: 5rem;
     width: 90vw;
   }
-
   .news-box {
-    grid-column: 1 / 3;
-    grid-row: 1 / 4;
+    grid-column: 1/3;
+    grid-row: 1/4;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: min-content max-content max-content;
-    place-items: center;
     gap: 2em;
     padding-block-end: 3em;
   }
-
   .weather-box {
     color: var(--default-color);
-    grid-column: 3 / 4;
-    grid-row: 3 / 4;
+    grid-column: 3/4;
+    grid-row: 3/4;
     text-align: center;
   }
-
   .weather-forecast {
     grid-row: 4/5;
     grid-column: 1/4;
-    
   }
-
-  .forecast {
+  .forecast,
+  .member-card {
     width: 100%;
-    
   }
-
   .main-day-box {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto;
     margin: 10px;
     column-gap: 10em;
-  }     
-
-
-  /* Footer */
-
+  }
   footer:not(.copyright-box) {
     align-items: flex-start;
     flex-direction: row;
     flex-flow: wrap;
     text-align: left;
   }
-
   .footer-social-links:hover svg {
-    fill: var(--primary-color);
+    fill: white;
   }
-
-  /* ----------------------------------------------------- */
-  /* ---------------------- DIRECTORY PAGE SECTION --------------- */
-  /* ----------------------------------------------------- */
-
-  .member-card {
-    width: 100%;
-  }
-
   .list .member-card {
     gap: 3rem;
   }
-
   .list .member-card .member-info-box {
     gap: 2rem;
   }
-
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2.5rem;
   }
-
-  
-@media only screen and (min-width: 118.75em) {
-  .news-event-section-box,
-  .service-card-box,
-  .partners {
-    max-width: 50vw;
-    margin: 0 auto;
+  .form-container {
+    justify-content: space-evenly;
   }
-
-  .header-box {
-    max-width: 118rem;
+  .form-container .svg-box {
+    width: 35%;
   }
-
-  .mini-gallery-box,
-  .explore-text-box {
-    max-width: 50em;
+  .form-container form input[type="submit"]:hover {
+    background-color: var(--default-color);
+    color: var(--primary-color);
   }
-
-  .explore {
-    justify-content: center;
-    gap: 7em;
+  .form-container form input[type="submit"]:active {
+    box-shadow: none;
   }
-}
-
+  .join-page-body .join-cta-text {
+    width: 70vw;
+    margin: 0 auto 3em;
+  }
+  .summary-box,
+  .thankyou-page-body section h1,
+  .thankyou-page-body section p {
+    width: 60vw;
+    max-width: 70vw;
+    margin: 1em auto;
+  }
+  .membership-card {
+    display: grid;
+    gap: 2rem;
+  }
+  .membership-card h2 {
+    text-align: center;
+    font-size: 2em;
+  }
 }
