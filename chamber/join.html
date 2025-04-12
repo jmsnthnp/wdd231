@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caloocan Chamber of Commerce | Join Page</title>
+    <meta name="author" content="James Nathan Pecundo">
+    <meta name="description" content="Join the Caloocan Chamber of Commerce to explore limitless possibilities in business ventures, investments, and innovation.">
+    <meta property="og:title" content="Caloocan Business Chamber">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jmsnthnp.github.io/wdd231/chamber/join.html">
+    <meta property="og:image" content="https://jmsnthnp.github.io/wdd231/chamber/images/logo-chamber.webp">
+    <meta property="og:site_name" content="Caloocan Business Chamber">
+    <meta property="og:description" content="Join the Caloocan Chamber of Commerce to explore limitless possibilities in business ventures, investments, and innovation.">
+    <link rel="icon" href="images/logo-chamber.png" sizes="32x32" type="image/png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;700&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/join.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+  </head>
+  <body class="join-page-body">
+    <header>
+      <button class="menu-btn" aria-label="Toggle menu button">
+        <svg>
+          <use xlink:href="images/sprite.svg#icon-icon-menu"></use>
+        </svg>
+      </button>
+      <div class="logo-box">
+        <a href="index.html">
+          <img src="images/header-chambers.png" alt="Caloocan Business Chamber logo" class="logo" width="323" height="130">
+        </a>
+      </div>
+      <nav class="header-nav">
+        <ul class="nav-list">
+          <li>
+            <a href="index.html" class="nav-links">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-home"></use>
+              </svg> HOME </a>
+          </li>
+          <li>
+            <a href="discover.html" class="nav-links">
+              <svg>
+                <use xlink:href="images/sprite.svg#search"></use>
+              </svg> DISCOVER </a>
+          </li>
+          <li>
+            <a href="directory.html" class="nav-links">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-folder"></use>
+              </svg> DIRECTORY </a>
+          </li>
+          <li>
+            <a href="join.html" class="nav-links">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-add-user"></use>
+              </svg> JOIN </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <div class="join-cta-text">
+          <h1> Join the Caloocan Chamber Today! </h1>
+        </div>
+<div class="form-container" style="display: flex;">
+          <div class="form-box">
+            <form action="thankyou.html" method="get">
+              <div class="forms">
+                <label class="top"> First Name <span class="asterisk">*</span>
+                  <input type="text" name="fname" id="fname" required />
+                </label>
+                <label class="top"> Last Name <span class="asterisk">*</span>
+                  <input type="text" name="lname" id="lname" required />
+                </label>
+                <label class="top"> Title/Postion <input type="text" name="title" id="title" pattern="/^[A-Za-z -]{7,}$/" />
+                </label>
+                <label class="top"> Email address <span class="asterisk">*</span>
+                  <input type="email" name="email" id="email" placeholder="example@domain.com" required />
+                </label>
+                <label class="top"> Phone number <span class="asterisk">*</span>
+                  <input type="tel" name="phone" id="phone" required />
+                </label>
+                <label class="top"> Business/Organization name <span class="asterisk">*</span>
+                  <input type="text" name="company-name" id="company-name" required />
+                </label>
+                <div> Membership Level <span class="asterisk">*</span>
+                </div>
+                <label class="side-by-side np">
+                  <input type="radio" name="membership" id="np-membership" /> NP Membership </label>
+                <label class="side-by-side bronze">
+                  <input type="radio" name="membership" id="bronze-membership" /> Bronze Membership </label>
+                <label class="side-by-side silver">
+                  <input type="radio" name="membership" id="silver-membership" /> Silver Membership </label>
+                <label class="side-by-side gold">
+                  <input type="radio" name="membership" id="gold-membership" /> Gold Membership </label>
+                <label class="top"> Description <span class="asterisk">*</span>
+                  <textarea name="textarea" id="textarea"></textarea>
+                </label>
+                <label class="top">
+                  <input type="hidden" name="timestamp" />
+                </label>
+                <input type="submit" value="Join Chamber" />
+              </div>
+              <div class="benefits-box">
+                <div class="membership-card">
+                  <h2>Non-Profit Membership</h2>
+                  <button type="button" class="modal-open" data-modal="npModal"> Learn More </button>
+                </div>
+                <div class="membership-card">
+                  <h2>Bronze Membership</h2>
+                  <button type="button" class="modal-open" data-modal="bronzeModal"> Learn More </button>
+                </div>
+                <div class="membership-card">
+                  <h2>Silver Membership</h2>
+                  <button type="button" class="modal-open" data-modal="silverModal"> Learn More </button>
+                </div>
+                <div class="membership-card">
+                  <h2>Gold Membership</h2>
+                  <button type="button" class="modal-open" data-modal="goldModal"> Learn More </button>
+                </div>
+              </div>
+            </form>
+            <div id="npModal" class="modal">
+              <div class="modal-content">
+                <h3>NP (Non-Profit) Membership Benefits</h3>
+                <ul>
+                  <li>Reduced Membership Fees</li>
+                  <li>Access to Networking Events</li>
+                  <li>Visibility</li>
+                  <li>Educational Resources</li>
+                </ul>
+                <button class="modal-close">Close</button>
+              </div>
+            </div>
+            <div id="bronzeModal" class="modal">
+              <div class="modal-content">
+                <h3>Bronze Membership Benefits</h3>
+                <ul>
+                  <li>Enjoy standard membership benefits</li>
+                  <li>Marketing Opportunities</li>
+                  <li>Business Workshops</li>
+                  <li>Access to Member Discounts</li>
+                </ul>
+                <button class="modal-close">Close</button>
+              </div>
+            </div>
+            <div id="silverModal" class="modal">
+              <div class="modal-content">
+                <h3>Silver Membership Benefits</h3>
+                <ul>
+                  <li>Enhanced Visibility</li>
+                  <li>Event Sponsorship</li>
+                  <li>Premium Marketing</li>
+                  <li>Exclusive Workshops</li>
+                </ul>
+                <button class="modal-close">Close</button>
+              </div>
+            </div>
+            <div id="goldModal" class="modal">
+              <div class="modal-content">
+                <h3>Gold Membership Benefits</h3>
+                <ul>
+                  <li>Premier Visibility</li>
+                  <li>VIP Events</li>
+                  <li>Marketing Concierge</li>
+                  <li>Thought Leadership</li>
+                  <li>Custom Solutions</li>
+                </ul>
+                <button class="modal-close">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="contact-box">
+        <p class="footer-captions">Contact Us</p>
+        <address>
+          <a href="tel:+639771238087">+(63) 977 123 8087</a>
+        </address>
+      </div>
+      <div class="footer-socials">
+        <p class="footer-captions">Stay Connected</p>
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/" target="_blank" class="footer-social-links" aria-label="Go to Instagram">
+              <svg>
+                <use xlink:href="images/sprite.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/" target="_blank" class="footer-social-links" aria-label="Go to LinkedIn">
+              <svg>
+                <use xlink:href="images/sprite.svg#linkedin"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/" target="_blank" class="footer-social-links" aria-label="Go to Facebook">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="copyright-box">
+        <p> &copy; <span id="year"></span> James Nathan Pecundo | Philippines </p>
+        <p> Last modified: <span class="last-modify"></span>
+        </p>
+        <p id="analytics"></p>
+      </div>
+    </footer>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
