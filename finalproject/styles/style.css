@@ -1,0 +1,532 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+}
+
+:root {
+	--primary-color: #141414;
+	--secondary-color: #141414;
+	--third-color: #02D1E6;
+
+	/* fonts */
+	--font-1: "Nunito", sans-serif;
+	--font-2: "Nunito", sans-serif; 
+}
+
+body {
+	height: 100%;
+	/* background-color: var(--primary-color); */
+	background: #121214;
+	font-family: "Nunito", sans-serif;
+	margin: 0;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	position: relative;
+}
+
+/* ------------------------------ header */
+
+.background-img {
+	width: 100%;
+	display: block;
+}
+
+.background-img img{
+	width: 100%;
+	height: auto;
+
+}
+
+.background-img-container {
+	position: relative;
+  }
+
+.background-img-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0)); 
+}
+
+.hero-text {
+	position: absolute;
+	bottom: 15%;
+	left: 50px;
+	color: white;
+	width: 40%;
+}
+
+
+
+header {
+	padding: 0.5rem;
+	display: flex;
+	/* flex-wrap: wrap; */
+	align-items: center;
+	justify-content: space-between;
+	background: #141414;
+}
+
+.menu-item.active a{
+    color: #02D1E6;
+}
+
+.menu-item:hover a {
+    color: #02D1E6;
+}
+
+.menu-container {
+	display: flex;
+
+}
+
+.menu-container.open {
+    display: block;
+}
+
+.menu-item a {
+	font-size: 22px;
+	font-family:var(--font-2) ;
+	border-radius: 5px;
+	padding: 10px;
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+	transition: color 0.5s;
+	justify-content: space-around;
+}
+
+.menu-item.active a{
+    color: #02D1E6;
+}
+
+.menu-item:hover a{
+    color: #02D1E6;
+}
+
+.menu-container li  {
+	text-decoration: none;
+	list-style: none;
+}
+
+.logo {
+	width: 300px;
+	margin: 0;
+}
+
+.logos {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+.search {
+	border: none;
+	padding: 0.5rem 1rem;
+	border-radius: 50px;
+	color: #fff;
+	font-size: 1rem;
+	font-family: inherit;
+}
+
+.search:focus {
+	outline: 0;
+	color: red;
+}
+
+.search-icon {
+	font-size: 30px;
+	position: relative;
+	top: 10px;
+	color: white;
+}
+
+/* ----------------------------------- headings */
+.filter-header {
+	color: rgb(255, 255, 255);
+	margin: 15px;
+	font-size: 35px;
+}
+
+.header-1 {
+	color: rgb(109, 109, 109);
+	margin: 15px;
+	font-size: 35px;
+}
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1rem;
+	margin-top: 10px;
+}
+
+.movie {
+	width: 300px;
+	/* margin: 1rem; */
+	border-radius: 3px;
+	box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.2);
+	background-color: var(--secondary-color);
+	position: relative;
+	overflow: hidden;
+}
+
+.movie img {
+	width: 100%;
+}
+
+.movie-info {
+	color: #eee;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.5rem 1rem 1rem;
+	letter-spacing: 0.5px;
+	font-family: var(--font-2);
+}
+
+.movie-info h3 {
+	margin-top: 0;
+}
+
+.movie-info span {
+	background-color: var(--primary-color);
+	padding: 0.25rem 0.5rem;
+	border-radius: 3px;
+	font-weight: bold;
+}
+
+.movie-info span.green {
+	color: lightgreen;
+}
+
+.movie-info span.orange {
+	color: rgb(255, 182, 46);
+}
+
+.movie-info span.red {
+	color: red;
+}
+
+.overview {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(70, 70, 70, 0.965);
+	color: white;
+	padding: 1rem;
+	max-height: 100%;
+	transform: translateY(100%);
+	transition: transform 0.5s ease-in;
+	
+}
+
+.movie:hover .overview {
+	transform: translateY(0);
+}
+
+#tags {
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin-left: 10px;
+}
+
+.tag {
+	color: white;
+	padding: 10px 20px;
+	background-color: #02D1E6;
+	border-radius: 5px;
+	margin: 5px;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.tag.highlight {
+	background-color: #fff;
+	color: #222550;
+}
+.no-results {
+	color: white;
+}
+
+.pagination {
+	display: flex;
+	margin: 10px 30px 0;
+	align-items: center;
+	justify-content: center;
+	color: white;
+}
+
+.page {
+	padding: 20px;
+	cursor: pointer;
+}
+
+.page.disabled {
+	cursor: not-allowed;
+	color: grey;
+}
+
+.current {
+
+	border: none;
+	font-size: 30px;
+	font-weight: 600;
+	color: rgb(62, 62, 62);
+	background: transparent;
+}
+
+.know-more {
+	background-color: var(--third-color);
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+	border: 0;
+	border-radius: 50px;
+	padding: 10px 20px;
+	margin-top: 5px;
+	cursor: pointer;
+}
+/* The Overlay (background) */
+.overlay {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1; 
+	left: 0;
+	top: 0;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.9); 
+	overflow-x: hidden;
+	transition: 0.5s; 
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+	position: relative;
+	top: 10%;
+	width: 100%; 
+	text-align: center;
+	margin-top: 30px; 
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+	padding: 8px;
+	text-decoration: none;
+	font-size: 36px;
+	color: #818181;
+	display: block; 
+	transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover,
+.overlay a:focus {
+	color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+	position: absolute;
+	top: 20px;
+	right: 45px;
+	font-size: 60px;
+	color: rgb(184, 0, 0);
+	background: rgb(255, 255, 255);
+	border-radius: 20px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+	.overlay a {
+		font-size: 20px;
+	}
+	.overlay .closebtn {
+		font-size: 40px;
+		top: 15px;
+		right: 35px;
+	}
+}
+
+.embed.hide {
+	display: none;
+}
+
+.embed.show {
+	display: inline-block;
+}
+
+/* ------------------------------- inside know more modal */
+
+.arrow {
+	position: absolute;
+	font-size: 40px;
+}
+
+.arrow.left-arrow {
+	top: 50%;
+	left: 5%;
+	transform: translateY(-50%);
+}
+
+.arrow.right-arrow {
+	top: 50%;
+	transform: translateY(-50%);
+	right: 5%;
+}
+
+.dots {
+	margin-top: 30px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.dots .dot {
+	padding: 10px 15px;
+	border: 1px solid white;
+	color: white;
+	font-size: 20px;
+	font-weight: 600;
+	margin: 5px;
+	background: black;
+}
+
+.dots .dot.active {
+	border-color: var(--primary-color);
+	background: black;
+	color: rgb(255, 35, 35);
+}
+
+/* @keyframes animFw {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+} */
+
+
+/* ---------------- footer */
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    background: #141414;
+    color: white;
+    font: var(--fontsStyle1) var(--fontWeight3)16px var(--font1);
+	padding: 80px;
+}
+
+.footer-info-1 p{
+    padding: 0;
+    margin: 5px 10px;
+}
+
+svg {
+	height: 3rem;
+	width: 3rem;
+}
+
+.footer-info-2 p{
+    padding: 0;
+    margin: 5px 10px;
+}
+
+.footer-title{
+    font-weight: bold;
+}
+
+.social-media {
+	list-style: none;
+}
+
+.social-media a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.social-media svg {
+    font-size: 50px;
+    fill: #02D1E6;
+}
+
+.attributions {
+	color: rgb(232, 232, 232);
+}
+
+
+@media (max-width: 600px) {
+    footer {
+        display: block;
+    }
+
+    .social-media svg{
+        font-size: 50px;
+        color: rgb(130, 130, 130);
+    }
+
+    .social-media {
+        display: flex;
+        justify-content: space-evenly;
+    }
+/* 
+	.logo {
+		width: 200px;
+	} */
+
+	.hero-text, .hero-button {
+		display: none;
+	}
+}
+
+
+
+/* burger button */
+#burger-button {
+    color: rgb(255, 255, 255);
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    font-size: 45px;
+}
+
+#burger-button {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    
+    #burger-button{
+        display: block;
+        margin-left: auto;
+        margin-right: 10px;
+    }
+
+    .menu-container {
+        width: 100%;
+    }
+    .menu-container{
+        display: none;
+        
+    }
+	header{
+		display: block;
+	}
+
+	.logos {
+		flex-wrap: wrap;
+	}
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="James Nathan Pecundo">
+    <meta name="description" content="This site simply showcases movie titles and descriptions, linking to self-hosted files from third-party providers for easy access.">
+
+    <!-- social media meta -->
+    <meta property="og:title" content="FilmStacks | Contact Page">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://raw.githubusercontent.com/jmsnthnp/wdd231/refs/heads/main/finalproject/images/FilmStacks-fav.ico">
+    <meta property="og:url" content="https://jmsnthnp.github.io/wdd231/finalproject/contactPage.html">
+
+    <!-- styles link -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="images/FIlmStacks-fav.ico">
+    <link rel="stylesheet" href="styles/homepage.css">
+    <link rel="stylesheet" href="styles/contactPage.css">
+
+    <!-- font link links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <title>FilmStacks</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="logos">
+            <img class="logo" src="images/FilmStacks-min.png" alt="FilmStacks Logo">
+            <form id="form">
+                <input type="text" placeholder="Search for Anime/Movie" id="search" class="search">
+            </form>
+            <button id="burger-button">&#9776;</button>
+        </div>
+        <div>
+            <nav>
+                <ul class="menu-container">
+                    <li class="menu-item"><a href="https://jmsnthnp.github.io/wdd231/finalproject/homepage.html">HOME</a></li>
+                    <li class="menu-item"><a href="https://jmsnthnp.github.io/wdd231/finalproject/index.html">SEARCH</a></li>
+                    <li class="menu-item"><a href="https://jmsnthnp.github.io/wdd231/finalproject/join.html">JOIN</a></li>
+                    <li class="menu-item active"><a href="https://jmsnthnp.github.io/wdd231/finalproject/contactPage.html">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="contact-form-container">
+            <div class="website-contact-info">
+                <div class="lets-talk">
+                    <ion-icon name="call-outline" class="phone-icon"></ion-icon>
+                    <p><strong>Let's Talk</strong></p>
+                </div>
+                <p>(+123) 456 7899</p>
+                <br>
+                <br>
+
+                <div class="our-address">
+                    <ion-icon name="location-outline" class="location-icon"></ion-icon>
+                    <p><strong>Address</strong></p>
+                </div>
+                <p>Caloocan City, Metro Manila</p>
+                <p>Philppines</p>
+                <br>
+                <br>
+
+                <div class="general-support">
+                    <ion-icon name="mail-outline" class="mail-icon"></ion-icon>
+                    <p><strong>General Support</strong></p>
+                </div>
+                <p>contactUs@example.com</p>
+            </div>
+
+
+            <form id="contactForm" action="#" method="get">
+                <label for="fname">First name:</label>
+                <br>
+                <input type="text" id="fname" name="fname" autocomplete="given-name" title="Enter first name" placeholder="John" required>
+                <br>
+                <br>
+                <label for="lname">Last name:</label>
+                <br>
+                <input type="text" id="lname" name="lname" autocomplete="family-name" title="Enter last name" placeholder="Doe" required>
+                <br>
+                <br>
+                <label for="email">Email Address: </label>
+                <br>
+                <input type="email" name="email" id="email" title="Enter your email here" autocomplete="email" placeholder="example@gmail.com" required>
+                <br>
+                <br>
+                <label for="phone-number">Mobile Phone Number:</label>
+                <br>
+                <input type="tel" name="phone-number" id="phone-number" title="enter phone number" required autocomplete="tel">
+                <br>
+                <br>
+                <label for="your-message">Your Message to Us</label>
+                <br>
+                <textarea name="your-message" id="your-message"></textarea>
+                <br>
+
+                <input type="submit" value="Submit Your Application">
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-info-1">
+            <p class="footer-title">James Nathan Pecundo</p>
+            <p>Caloocan City, Metro Manila</p>
+        </div>
+
+        <div class="social-media">
+            <a href="https://www.instagram.com/" target="_blank" class="footer-social-links" aria-label="Go to Instagram page">
+                <svg>
+                    <use xlink:href="images/sprite.svg#instagram"></use>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" class="footer-social-links" aria-label="Go to LinkedIn">
+                <svg>
+                    <use xlink:href="images/sprite.svg#linkedin"></use>
+                </svg>
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" class="footer-social-links" aria-label="Go to Facebook page">
+                <svg>
+                    <use xlink:href="images/sprite.svg#icon-facebook"></use>
+                </svg>
+            </a>
+        </div>
+
+        <div class="footer-info-2">
+            <p id="copyrightYear"></p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+
+    <script src="javascript/script.js"></script>
+    <script src="javascript/homepage.js" defer></script>
+    <script src="javascript/contactPage.js"></script>
+</body>
+
+</html>

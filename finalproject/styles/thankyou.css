@@ -1,0 +1,13 @@
+#results {
+    background-color: #f0f0f0; /* Light gray background */
+    color: #ff0000; /* Red text color */
+    padding: 20px;
+    border: 2px solid #ccc; /* Gray border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    font-family: Arial, sans-serif; /* Font family */
+}
+
+#results p {
+    margin: 10px 0; /* Space between paragraphs */
+}

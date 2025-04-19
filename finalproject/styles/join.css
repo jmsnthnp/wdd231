@@ -1,0 +1,83 @@
+
+.join-main {
+    background: transparent;
+    color: white;
+    position: relative;
+    margin: 0;
+}
+
+/* ---------------------- background image  */
+.background-image {
+    width: 100vw;
+    margin: 0;
+}
+
+.background-image img{
+    width: 100%;
+    height: 1400px;
+    margin: 0;
+}
+
+
+
+/* ---------------------- overlay */
+
+.join-page-overlay {
+    background: rgba(0, 0, 0, 0.837);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+/* ---------------------- form */
+form {
+    width: 100%;
+    margin: 0;
+}
+
+.form-header {
+    text-align: center;
+    font-size: 30px;
+
+}
+
+input, select, textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #8e8e8e;
+    border-radius: 5px;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+input[type='submit'] {
+    background: rgb(30, 30, 30);
+    color: white;
+    height: 4rem;
+}
+
+input[type='submit']:hover {
+    cursor: pointer;
+    background: rgb(0, 0, 0);
+    transform: scale(1.05);
+}
+
+.join-form-container {
+    position: absolute;
+    border: solid 1px gray;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(83, 83, 83, 0.749);
+    top: 20%;
+}
+
+
+/* footer */
+
+footer {
+    margin: 0;
+}
